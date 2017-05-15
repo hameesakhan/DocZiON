@@ -70,13 +70,86 @@
                     <div id="project">
                         <h2 class="title">Setting up a new project</h2>
                         <ol>
-                            <li>Clone ZiON</li>
+                            <li>
+                                Clone ZiON
+                                <code>
+                                    git clone --recursive -j8 git@github.com:prium/ZiON.git
+                                </code>
+                            </li>
+                            <li>
+                                Rename ‘ZiON’ with your template name
+                                <ol>
+                                    <li>Directory (Folder) name</li>
+                                    <li>Name in bower.json (Optional)</li>
+                                </ol>
+                            </li>
+                            <li>
+                                Open the folder with terminal or cmd. Clean ZiON’s git record and setup git for your project by running following commands:
+                                <ol>
+                                    <li><code>rm -rf .git</code></li>
+                                    <li><code>git init</code></li>
+                                    <li><code>git add .</code></li>
+                                    <li><code>git commit -m "Initial commit"</code></li>
+                                    <li><code>git remote add origin [your project’s git url]</code></li>
+                                    <li><code>git push -u --force origin master</code></li>
+                                </ol>
+                            </li>
+                            <li>
+                                Install dependencies by running following commands:
+                                <ol>
+                                    <li><code>bower install</code></li>
+                                    <li><code>npm install</code></li>
+                                </ol>
+                            </li>
+                            <li>Run <code>gulp</code> and your default web browser will open up <a href="http://localhost:3000">http://localhost:3000</a></li>
                         </ol>
                     </div>
-                    <p id="environments">
-                    </p>
-                    <p id="configurations">
-                    </p>
+
+                    <!-- Environments -->
+                    <div id="environments">
+                        <h2 class="title">Environments</h2>
+                        <ol>
+                            <li>Debug</li>
+                            <li>Live</li>
+                            <li>Product</li>
+                        </ol>
+                        <ol type="a">
+                            <li>
+                                <h4>In javascript</h4>
+                                <pre>
+@if ZION_ENV = 'DEBUG'
+    alert("debug mode!");
+@endif</pre> 
+                            </li>
+                            <li>
+                                <h4>In pug</h4>
+                                <pre>
+#{ZION_ENV}</pre>
+                            </li>
+                            <li>
+                                <h4>In SCSS</h4>
+                                <pre>
+//todo</pre>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- Configurations -->
+                    <div id="configurations">
+                        <h2 class="title">Configurations</h2>
+                        <ol>
+                            <li>
+                                <h4>SCSS</h4>
+                                <p>
+                                    Edit <code>assets/scss/_config.scss</code> and override the available variables. You can find all the available SCSS variables in <code>zcore/assets/scss/_config.scss</code>
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Image blur</h4>
+                                <p>todo</p>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
                 <div class="col-sm-3">
                     <ul class="sidebar">

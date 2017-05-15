@@ -34,3 +34,6 @@ a:hover, a:active, a:focus{
 .mainContent ol li{
 
 }
+.mainContent ol ol{
+	list-style-type: lower-alpha;
+}
