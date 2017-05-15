@@ -27,16 +27,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">ZioN</a>
+                    <a class="navbar-brand" href="#">ZiON</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Getting Start<span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Commands</a></li>
-                        <li><a href="#">SCSS</a></li>
-                        <li><a href="#">Pug Modules</a></li>
+                        <li><a href="#taskrunner">Commands</a></li>
+                        <li><a href="#scss">SCSS</a></li>
+                        <li><a href="#skeleton">Pug Modules</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container -->
@@ -150,7 +150,173 @@
                             </li>
                         </ol>
                     </div>
-                </div>
+
+                    <!-- Taskrunner commands -->
+                    <div id="taskrunner">
+                        <h2 class="title">Taskrunner commands</h2>
+                        <p>
+                            Embedded gulp commands in ZiON and their actions are follows:
+                        </p>
+                        <ul>
+                            <li>
+                                <code>gulp</code>: Start the engine and run a server on <a href="http://localhost:3000/">http://localhost:3000/</a>
+                            </li>
+                            <li>
+                                <code>gulp compile</code>: Compiles scss, pug and generate source maps
+                            </li>
+                            <li>
+                                <code>gulp assets</code>: Push image, video, audio, fonts etc from source to bin
+                            </li>
+                            <li>
+                                <code>gulp build</code>: Build compressed, final template, bin temporary files (todo)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Skeleton -->
+                    <div id="skeleton">
+                        <h2 class="title">Skeleton</h2>
+                        <p>
+                            The Skeleton provide standard wrapper for all pages, including default libraries, content blocks (described in section 5), title tag and the overall genetic structure of the output HTML pages.
+                        </p>
+                        <p>
+                            Located at <code>zcore/pug_modules/skeleton.pug</code>
+                        </p>
+                        <p>
+                            <bold>Tip:</bold> Extend the skeleton.pug under <code>src/pug_modules</code> to add your global markups.
+                        </p>
+                    </div>
+
+                    <!-- Pages -->
+                    <div id="pages">
+                        <h2 class="title">Pages</h2>
+                        <p>
+                            Pages are located at <code>src/pages</code>. A page extends the skeleton and add sections to it self. All contents including asset links and copy text are provided from here.
+                        </p>
+                        <p>
+                            A page must extend a skeleton (described in section 4).
+                        </p>
+                        <p>
+                            Any page can access and override the following blocks defined in skeleton:
+                        </p>
+                        <ul>
+                            <li>
+                                <span class="liTitle">block variables :</span> Overrides some default content the page
+                            </li>
+                            <li>
+                                <span class="liTitle">block styles :</span> CSS codes and libraries
+                            </li>
+                            <li>
+                                <span class="liTitle">block content :</span> All sections are included in this block
+                            </li>
+                            <li>
+                                <span class="liTitle">block scripts :</span> JS codes and libraries
+                            </li>
+                            <li>
+                                <span class="liTitle">block offCanvas :</span> Offcanvas area. User this block if you want to add something outside &lt;main&gt; tag. eg: Push in menu.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Sections -->
+                    <div id="sections">
+                        <h2 class="tilte">Sections</h2>
+                        <p>
+                            <bold>Located at:</bold><code>./core/pug_modules/section</code>
+                        </p>
+                    </div>
+
+                    <!-- Elements -->
+                    <div id="elements">
+                        <h2 class="tilte">Elements</h2>
+                        <p>
+                            <bold>Located at:</bold><code>./core/pug_modules/elements</code>
+                        </p>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div id="buttons">
+                        <h2 class="tilte">Buttons</h2>
+                        <h4>Sizes</h4>
+                        <ul>
+                            <li>btn-xs</li>
+                            <li>btn-sm</li>
+                            <li>btn</li>
+                            <li>btn-lg</li>
+                        </ul>
+                        <h4>Styles</h4>
+                        <ul>
+                            <li>btn-xs</li>
+                            <li>btn-sm</li>
+                            <li>btn</li>
+                            <li>btn-lg</li>
+                        </ul>
+                    </div>
+
+                    <!-- Widgets -->
+                    <div id="widgets">
+                        <h2 class="tilte">Widgets</h2>
+                        <p>
+                            <bold>Located at:</bold><code>./core/pug_modules/widgets</code>
+                        </p>
+                    </div>
+
+                    <!-- SCSS -->
+                    <div id="scss">
+                        <h2 class="tilte">SCSS</h2>
+                        <h4>Breakpoints</h4>
+                        <p>
+                            ZiON is using <a href="https://github.com/sass-mq/sass-mq">Media Queries with superpowers</a>.
+                        </p>
+                        <p>
+                            Default breakpoints for zion, inspired by bootstrap 4:
+                        </p>
+                        <pre>
+$mq-breakpoints: (
+    mobile:  544px,
+    tablet:  768px,
+    desktop: 992px,
+    wide:    1200px
+);</pre>
+                        <p>
+                            Read <a href="https://github.com/sass-mq/sass-mq">MQ documentation</a> for using mq()
+                        </p>
+                        <h4>Layout helpers:</h4>
+                        <ul>
+                            <li>
+                                <code>.full-height</code> Make the section full height for desktop devices
+                            </li>
+                            <li>
+                                <code>.v-center</code> Make the inner content centered
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Workflow with git -->
+                    <div class="workflow">
+                        <h2 class="title">Workflow with git</h2>
+                        <p>
+                            If you are using the command line tool for  git, use the following commands for day to day workflow. Assuming you already have the git repo up and running correctly.
+                        </p>
+                        <h4>Before start working:</h4>
+                        <ol>
+                            <li>
+                                <code>git checkout master; git pull; git checkout your-branch; git merge your-branch ## Fix conflicts here</code>
+                            </li>
+                        </ol>
+                        <h4>After work done:</h4>
+                        <ol>
+                            <li>
+                                <code>git commit -m " commit message"; git push; git checkout master; git pull; git merge your-branch ## Fix conflicts here</code>
+                            </li>
+                            <li>
+                                <code>git push; git checkout your-branch; git merge master</code>
+                            </li>
+                        </ol>
+                    </div>
+                </div> <!-- end of content -->
+
+                <!-- Sidebar -->
                 <div class="col-sm-3">
                     <ul class="sidebar">
                         <li><a href="#prerequisites">Prerequisites</a></li>
