@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Montserrat|Share+Tech+Mono');
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Montserrat';
+}
+p, .sidebar{
+	font-family: 'Lora';
+}
+code{
+	font-family: 'Share Tech Mono';
+}
+a:hover, a:active, a:focus{
+	text-decoration: none;
+}
+.sidebar{
+	position: fixed;
+	padding-left: 0;
+	font-size: 18px;
+	line-height: 29px;
+}
+.sidebar li{
+	list-style-type: none;
+}
+.sidebar li a{
+	border-left: 3px solid transparent;
+	padding-left: 20px;
+}
+.sidebar li a:hover{
+	border-left-color: gray;
+}
+.mainContent ol{
+
+}
+.mainContent ol li{
+
+}
