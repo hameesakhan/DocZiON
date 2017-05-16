@@ -3,6 +3,10 @@
 h1, h2, h3, h4, h5, h6{
 	font-family: 'Montserrat';
 }
+body{
+	font-family: 'Lora';
+	font-size: 18px;
+}
 p, .sidebar{
 	font-family: 'Lora';
 }
